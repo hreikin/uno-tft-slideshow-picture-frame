@@ -20,9 +20,8 @@ MCUFRIEND_kbv tft;
 #endif
 #define NAMEMATCH ""        // "" matches any name
 //#define NAMEMATCH "tiger"   // *tiger*.bmp
-// #define PALETTEDEPTH   0     // do not support Palette modes
+#define PALETTEDEPTH   0     // do not support Palette modes
 // #define PALETTEDEPTH   8     // support 256-colour Palette
-#define PALETTEDEPTH   6
 
 char namebuf[32] = "/";   //BMP files in root directory
 //char namebuf[32] = "/bitmaps/";  //BMP directory e.g. files in /bitmaps/*.bmp
@@ -75,7 +74,7 @@ void loop()
                 case 0:
                     Serial.print(millis() - start);
                     Serial.println(F("ms"));
-                    delay(50000);
+                    delay(5000);
                     break;
                 case 1:
                     Serial.println(F("bad position"));
